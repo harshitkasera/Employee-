@@ -3,7 +3,7 @@ const cors = require('cors')           // CORS allow karta hai frontend (jaise R
 require("./database/connection.js");   // Is file me tumne mongoose.connect(...)
 
 const app = express();                 // app ek express application bn gya jisme hum routes define karege
-
+const use = express()
 app.use(cors());                       // CORS allow karta hai cross-origin requests (frontend/backend alag ports pe hon to bhi kaam kare)
 app.use(express.json())                // jb hum post req bhejte hai with json body, to ye us body ko req body m available kara deta hai
 
